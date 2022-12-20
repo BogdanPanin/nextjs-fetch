@@ -1,0 +1,22 @@
+@import "./variable.scss";
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $header-color;
+  padding: 20px;
+  &__nav {
+  }
+  &__link {
+    font-family: "Times New Roman", Times, serif;
+    color: $text-color;
+    margin-right: 20px;
+    font-size: $font-size;
+    font-weight: 700;
+  }
+  :hover {
+    color: $text-color-hover;
+  }
+}
