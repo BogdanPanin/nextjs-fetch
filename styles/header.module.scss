@@ -7,6 +7,8 @@
   align-items: center;
   background-color: $header-color;
   padding: 20px;
+  &__nav {
+  }
   &__link {
     font-family: "Times New Roman", Times, serif;
     color: $text-color;

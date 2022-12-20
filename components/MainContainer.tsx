@@ -7,10 +7,7 @@ const MainContainer = ({ children, keywords }) => {
   return (
     <>
       <Head>
-        <meta
-          name="description"
-          content={"nextjs reactjs typesctipt " + keywords}
-        ></meta>
+        <meta keywords={"nextjs, js " + keywords}></meta>
         <title>Главная страница</title>
       </Head>
       <header className={styles.header}>
