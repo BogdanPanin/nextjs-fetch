@@ -6,6 +6,16 @@ interface UserProps {
   user: IUser;
 }
 
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+  const response = await fetch(
+    `https://jsonplaceholder.typicode.com/users/${params.id}`
+  );
+  const user = await response.json();
+  return {
+    props: { user }, // will be passed to the page component as props
+  };
+};
+
 export default function User({ user }: UserProps) {
   return (
     <Container keywords="Пользователь">
@@ -24,13 +34,3 @@ export default function User({ user }: UserProps) {
     </Container>
   );
 }
-
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  const response = await fetch(
-    `https://jsonplaceholder.typicode.com/users/${params.id}`
-  );
-  const user = await response.json();
-  return {
-    props: { user }, // will be passed to the page component as props
-  };
-};
