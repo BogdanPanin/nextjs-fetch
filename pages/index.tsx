@@ -6,8 +6,10 @@ type Props = {};
 
 function index({}: Props) {
   return (
-    <MainContainer keywords="react typescript">
-      <H1 title="Главная Страница"></H1>
+    <MainContainer keywords="reactJS typescript">
+      <div className="w-full p-4">
+        <H1 title="Главная Страница"></H1>
+      </div>
     </MainContainer>
   );
 }
